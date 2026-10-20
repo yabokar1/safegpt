@@ -1,0 +1,71 @@
+:root {
+  color: #f5f5f5;
+  background: #0c0c0c;
+  font-family: Inter, "Segoe UI", sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+button, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+a { color: inherit; }
+
+.nav, main { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+.nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; }
+.brand { font-weight: 600; text-decoration: none; font-size: 18px; }
+nav { display: flex; gap: 16px; align-items: center; }
+.pill, button {
+  background: #fff;
+  color: #111;
+  border: 0;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.result button.ghost { background: #fff; color: #111; border: 1px solid #d4d4d4; }
+.kicker { color: #86efac; letter-spacing: 0.08em; text-transform: uppercase; font-size: 12px; font-weight: 600; }
+h1 { font-size: clamp(40px, 6vw, 64px); line-height: 0.95; margin: 8px 0 12px; letter-spacing: -0.04em; }
+.lede { max-width: 680px; color: #d4d4d4; line-height: 1.5; }
+.desk {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 28px;
+}
+label, .result, .history article {
+  background: #fff;
+  color: #111;
+  border-radius: 16px;
+  padding: 16px;
+}
+label { display: flex; flex-direction: column; gap: 8px; }
+textarea {
+  width: 100%;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 12px;
+  resize: vertical;
+  background: #fafafa;
+}
+.result-head { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
+.result h2, .result h3, section h2 { margin: 0 0 8px; }
+pre {
+  white-space: pre-wrap;
+  background: #111;
+  color: #f5f5f5;
+  border-radius: 12px;
+  padding: 14px;
+  line-height: 1.45;
+}
+.error { color: #111; background: #f5f5f5; border-radius: 12px; padding: 12px; }
+.quiet { color: #525252; }
+#history { margin: 28px 0 48px; }
+#history > h2 { color: #f5f5f5; }
+.history { display: grid; gap: 12px; }
+.history pre { margin: 8px 0 0; }
+
+@media (max-width: 800px) {
+  .desk, .result-head { grid-template-columns: 1fr; display: grid; }
+  .actions { justify-content: flex-start; }
+}
